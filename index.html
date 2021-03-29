@@ -54,10 +54,10 @@ Copyright. All rights reserved.
 			color: inherit;
 		}
 
+		/*Page*/
+
 		.page-content{
 			width: 600px;
-			margin: 0 auto;
-
 			position: absolute;
   			left: 50%;
   			top: 50%;
@@ -65,9 +65,11 @@ Copyright. All rights reserved.
   			transform: translate(-50%, -50%);
 		}
 
+		/*Page Title*/
+
 		.page-title{
-			margin-top: 40px;
-			margin-bottom: 100px;
+			height: 100px;
+			line-height: 100px;
 		}
 
 		.page-title-text{
@@ -77,32 +79,13 @@ Copyright. All rights reserved.
 			font-weight: 700;
 		}
 
-		.page-arts-table{
-			width: 600px;
+		/*Page Art*/
+
+		.page-preview{
 			text-align: center;
 		}
 
-		.page-arts-table:after {
- 			content: "";
-  			display: table;
-  			clear: both;
-		}
-
-		.page-arts-column{
-			float: left;
-  			width: 25%;
-		}
-
-		.page-art-preview{
-			text-align: center;
-			width: 150px;
-			height: 300px;
-		}
-
-		.page-art-stl{
-			width: 200px;
-			height: auto;
-		}
+		/*Page Footer, Footer links*/
 
   		.page-footer{
   			margin-top: 40px;
@@ -116,28 +99,25 @@ Copyright. All rights reserved.
   			margin-right: 10px;
   		}
 
-  		.page-footer-linkr{
+  		.page-footer-link_r{
   			font-size: 13px;
   			color: gray;
   			display: inline-block;
   			float: right;
   		}
 
-/*  		.right{
-  			margin-right: -1px;
-  			float: right;
-  		}*/
+  		/*Page Menu, Menu Links*/
 
-  		.menu{
-  			width: 595px;
-  			height: 445px;
+  		.page-menu{
+  			width: 590px;
+  			height: 441px;
   			border: 5px solid black;
   			display: none;
   			font-size: 25px;
   			color: black;
   		}
 
-  		.menuitems{
+  		.page-menuitems{
   			position: relative;
     		top: 50%;
     		-webkit-transform: translateY(-50%);
@@ -145,31 +125,55 @@ Copyright. All rights reserved.
     		transform: translateY(-50%);
   		}
 
+  		/*Page size for dif. screens*/
 
-/*  		@media (max-width: 400px) {
-  			.page-content{
-  				width: 300px;
-  			}
+  		@media (orientation: landscape) {
+			.page-content {
+			top: 0;
+  			-webkit-transform: translate(-50%, 0);
+  			transform: translate(-50%, 0);
+			}
+		}
 
-  			.page-arts-table{
-  				width: 300px;
-  			}
+		@media (min-width: 481px) and (max-width: 767px) {
+			img { width: 450px; }
+			.page-content { width: 450px; }
+			.page-menu { width: 440px; height: 330px;}
+			.page-menuitems {font-size: 19px;}
+			.page-footer-link_r { float: none;}
+		}
 
-  			.menu{
-  				width: 270px;
-  				height: 200px;
-  				font-size: 15px;
-  				padding: 10px;
-  			}
+		@media (min-width: 500px) and (max-width: 600px) {
+			img { width: 450px; }
+			.page-content { width: 450px; }
+			.page-menu { width: 440px; height: 330px;}
+			.page-menuitems {font-size: 19px;}
+			.page-footer-link_r { float: none;}
+		}
 
-  			img{
-  				width: 300px;
-  			}
+		@media (min-width: 400px) and (max-width: 450px) {
+			img { width: 380px; }
+			.page-content { width: 380px; }
+			.page-menu { width: 370px; height: 280px;}
+			.page-menuitems {font-size: 17px;}
+			.page-footer-link_r { float: none;}
+		}
+		
+		@media (min-width: 375px) and (max-width: 375px) {
+			img { width: 340px; }
+			.page-content { width: 340px; }
+			.page-menu { width: 330px; height: 250px;}
+			.page-menuitems {font-size: 15px;}
+			.page-footer-link_r { float: none;}
+		}
 
-  			.page-footer-linkr{
-  				float: none;
-  			}
-  		}*/
+		@media (min-width: 320px) and (max-width: 320px) {
+			img { width: 290px; }
+			.page-content { width: 290px; }
+			.page-menu { width: 280px; height: 210px;}
+			.page-menuitems {font-size: 12px;}
+			.page-footer-link_r { float: none;}
+		}
 
 	</style>
 
@@ -177,9 +181,9 @@ Copyright. All rights reserved.
 <body>
 
 	<script type="text/javascript">
-		function showmenu() {
-			document.getElementById('art').style.display = "none";
-			document.getElementById('menu').style.display = "block";
+		function page_func_show_menu() {
+			document.getElementById('page-func-art').style.display = "none";
+			document.getElementById('page-func-menu').style.display = "block";
 		}
 	</script>
 
@@ -188,26 +192,27 @@ Copyright. All rights reserved.
 			<div class="page-title-text"><a href="index.html">marshin.art</a></div>
 		</div>
 
-		<div class="page-arts-table">
-				<img id="art" src="images/art21.jpg" onclick="showmenu()">
-				<div id="menu" class="menu">
-					<div class="menuitems">
-						<div class="menuitem"><a href="https://opensea.io/collection/theforest">THE FOREST PT. 1</a></div>
-						<div class="menuitem"><a href="https://opensea.io/collection/marshin-sticker-pack">MARSHIN STICKER PACK</a></div>
-						<div class="menuitem"><a href="https://opensea.io/collection/marshin-art-collection-vol-1">MARSHIN ART COLLECTION VOL. 1</a></div>
-						<div class="menuitem"><a style="color: gray;" href="#">MARSHIN PHOTO COLLECTION VOL. 1</a></div>
+		<div class="page-preview">
+				<img src="images/art21.jpg" id="page-func-art" onclick="page_func_show_menu()">
+				
+				<div class="page-menu" id="page-func-menu">
+					<div class="page-menuitems">
+						<div><a href="https://opensea.io/collection/theforest" target="_blank">THE FOREST PT. 1</a></div>
+						<div><a href="https://opensea.io/collection/marshin-sticker-pack" target="_blank">MARSHIN STICKER PACK</a></div>
+						<div><a href="https://opensea.io/collection/marshin-art-collection-vol-1" target="_blank">MARSHIN ART COLLECTION VOL. 1</a></div>
+						<div><a style="color: gray;" href="#">MARSHIN PHOTO COLLECTION VOL. 1</a></div>
 					</div>
 				</div>
 		</div>
 
 		<div class="page-footer">
-			<div class="page-footer-link"><a href="https://opensea.io/accounts/captainmarshin">OpenSea</a></div>
-			<div class="page-footer-link"><a href="https://rarible.com/captainmarshin">Rarible</a></div>
-			<div class="page-footer-link"><a href="https://foundation.app/captainmarshin">Foundation</a></div>
-			<div class="page-footer-link"><a href="https://mintable.app/u/captainmarshin">Mintable</a></div>
-			<div class="page-footer-link"><a href="https://twitter.com/captainmarshin">Twitter</a></div>
-			<div class="page-footer-link"><a href="https://instagram.com/marshin.art">Instagram</a></div>
-			<div class="page-footer-linkr"><a href="http://captainmarshin.com">captainmarshin.com</a></div>
+			<div class="page-footer-link"><a href="https://opensea.io/accounts/captainmarshin" target="_blank">OpenSea</a></div>
+			<div class="page-footer-link"><a href="https://rarible.com/captainmarshin" target="_blank">Rarible</a></div>
+			<div class="page-footer-link"><a href="https://foundation.app/captainmarshin" target="_blank">Foundation</a></div>
+			<div class="page-footer-link"><a href="https://mintable.app/u/captainmarshin" target="_blank">Mintable</a></div>
+			<div class="page-footer-link"><a href="https://twitter.com/captainmarshin" target="_blank">Twitter</a></div>
+			<div class="page-footer-link"><a href="https://instagram.com/marshin.art" target="_blank">Instagram</a></div>
+			<div class="page-footer-link_r"><a href="http://captainmarshin.com" target="_blank">captainmarshin.com</a></div>
 		</div>
 	</div>
 
