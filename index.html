@@ -1,0 +1,215 @@
+<!-- 
+
+Marshin.Art Website.
+marshin.art
+Desinged by Маршин Entertainment in Saint Petersburg.
+Copyright. All rights reserved.
+2021 
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>marshin.art - nft digital collections</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="title" content="_NAME_">
+	<meta name="description" content="_DESCRIPTIONS_">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.marshin.art/">
+	<meta property="og:title" content="_NAME_">
+	<meta property="og:description" content="_DESCRIPTIONS_">
+	<meta property="og:image" content="_IMAGE_">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://www.marshin.art/">
+	<meta property="twitter:title" content="_NAME_">
+	<meta property="twitter:description" content="_DESCRIPTIONS_">
+	<meta property="twitter:image" content="_IMAGE_">
+
+	<!-- Favicon -->
+
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background: white;
+			color: black;
+			font-family: Helvetica;
+		}
+
+		img{
+			max-width: 600px;
+			cursor: pointer;
+		}
+
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.page-content{
+			width: 600px;
+			margin: 0 auto;
+
+			position: absolute;
+  			left: 50%;
+  			top: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+		}
+
+		.page-title{
+			margin-top: 40px;
+			margin-bottom: 100px;
+		}
+
+		.page-title-text{
+			color: black;
+			float: right;
+			font-size: 25px;
+			font-weight: 700;
+		}
+
+		.page-arts-table{
+			width: 600px;
+			text-align: center;
+		}
+
+		.page-arts-table:after {
+ 			content: "";
+  			display: table;
+  			clear: both;
+		}
+
+		.page-arts-column{
+			float: left;
+  			width: 25%;
+		}
+
+		.page-art-preview{
+			text-align: center;
+			width: 150px;
+			height: 300px;
+		}
+
+		.page-art-stl{
+			width: 200px;
+			height: auto;
+		}
+
+  		.page-footer{
+  			margin-top: 40px;
+  			margin-bottom: 40px;
+  		}
+
+  		.page-footer-link{
+  			font-size: 13px;
+  			color: gray;
+  			display: inline-block;
+  			margin-right: 10px;
+  		}
+
+  		.page-footer-linkr{
+  			font-size: 13px;
+  			color: gray;
+  			display: inline-block;
+  			float: right;
+  		}
+
+/*  		.right{
+  			margin-right: -1px;
+  			float: right;
+  		}*/
+
+  		.menu{
+  			width: 595px;
+  			height: 445px;
+  			border: 5px solid black;
+  			display: none;
+  			font-size: 25px;
+  			color: black;
+  		}
+
+  		.menuitems{
+  			position: relative;
+    		top: 50%;
+    		-webkit-transform: translateY(-50%);
+    		-ms-transform: translateY(-50%);
+    		transform: translateY(-50%);
+  		}
+
+
+/*  		@media (max-width: 400px) {
+  			.page-content{
+  				width: 300px;
+  			}
+
+  			.page-arts-table{
+  				width: 300px;
+  			}
+
+  			.menu{
+  				width: 270px;
+  				height: 200px;
+  				font-size: 15px;
+  				padding: 10px;
+  			}
+
+  			img{
+  				width: 300px;
+  			}
+
+  			.page-footer-linkr{
+  				float: none;
+  			}
+  		}*/
+
+	</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		function showmenu() {
+			document.getElementById('art').style.display = "none";
+			document.getElementById('menu').style.display = "block";
+		}
+	</script>
+
+	<div class="page-content">
+		<div class="page-title">
+			<div class="page-title-text"><a href="index.html">marshin.art</a></div>
+		</div>
+
+		<div class="page-arts-table">
+				<img id="art" src="images/art21.jpg" onclick="showmenu()">
+				<div id="menu" class="menu">
+					<div class="menuitems">
+						<div class="menuitem"><a href="https://opensea.io/collection/theforest">THE FOREST PT. 1</a></div>
+						<div class="menuitem"><a href="https://opensea.io/collection/marshin-sticker-pack">MARSHIN STICKER PACK</a></div>
+						<div class="menuitem"><a href="https://opensea.io/collection/marshin-art-collection-vol-1">MARSHIN ART COLLECTION VOL. 1</a></div>
+						<div class="menuitem"><a style="color: gray;" href="#">MARSHIN PHOTO COLLECTION VOL. 1</a></div>
+					</div>
+				</div>
+		</div>
+
+		<div class="page-footer">
+			<div class="page-footer-link"><a href="https://opensea.io/accounts/captainmarshin">OpenSea</a></div>
+			<div class="page-footer-link"><a href="https://rarible.com/captainmarshin">Rarible</a></div>
+			<div class="page-footer-link"><a href="https://foundation.app/captainmarshin">Foundation</a></div>
+			<div class="page-footer-link"><a href="https://mintable.app/u/captainmarshin">Mintable</a></div>
+			<div class="page-footer-link"><a href="https://twitter.com/captainmarshin">Twitter</a></div>
+			<div class="page-footer-link"><a href="https://instagram.com/marshin.art">Instagram</a></div>
+			<div class="page-footer-linkr"><a href="http://captainmarshin.com">captainmarshin.com</a></div>
+		</div>
+	</div>
+
+</body>
+</html>
