@@ -18,20 +18,14 @@ Copyright. All rights reserved.
 
 	.title{
 		box-sizing: border-box;
-		padding-top: 80px;
-		text-shadow: 1px 1px 3px black;
+		padding-top: 20px;
 		padding-left: 20px;
 		padding-bottom: 40px;
 		font-size: 25pt;
-		height: 200px;
-		background: url(../images/background.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		border-bottom: 1px solid #191919;
-		margin-bottom: 30px;
 	}
 
-	a.title_link{
+
+	a.title{
 		color: #fff;
 		text-decoration: none;
 	}
@@ -44,7 +38,7 @@ Copyright. All rights reserved.
 			font-weight: bold;
 			margin-left: 20px;
 			margin-top: 15px;
-			margin-bottom: 15px;
+			margin-bottom: 16px;
 			font-size: 18px;
 		}
 
@@ -59,14 +53,14 @@ Copyright. All rights reserved.
 		.cat_description{
 			margin-left: 20px;
 			margin-right: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 22px;
 			font-size: 14px;
 			line-height: 21px;
-			color: #f0f0f0;
+			color: #7B7B7B;
 		}
 
 		.url_in_txt{
-			color: #f0f0f0;
+			color: #7B7B7B;
 		}
 
 		.url_in_title{
